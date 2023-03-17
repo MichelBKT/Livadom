@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Association LivAdom</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo+Play:wght@1000&family=Montserrat:wght@600&display=swap+css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+
+    <!--barre de navigation-->
+
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0d0564;">
+        <div class="container-fluid">
+            <a class="navbar-brand p-2" style="font-family: 'Cairo Play', cursive; font-size: 2em" href="index.html">
+                <img 
+                    src="https://media.cargocollective.com/1/20/650266/headerimg/gif02.gif"
+                    alt="logo-asso"
+                    class="logo-assoc"
+                > LivAdom
+            </a>
+                <button 
+                    class="navbar-toggler" 
+                    type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" 
+                    aria-expanded="false" 
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link p-4"  href="index.html" >Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active p-4" aria-current = "page" href="#">Présentation de l'assoc'</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-4" href="Adhésion.html">Je veux adhérer, expliquez-moi!</a>
+                    </li>
+                    <li class="navbar-text">
+                        <a
+                        class="nav-link p-3" href="#contact" 
+                        data-bs-toggle="modal" 
+                        data-bs-target="#contact">
+                        <svg 
+                            xmlns="http://www.w3.org/2000/svg" 
+                            width="16" 
+                            height="16" 
+                            fill="currentColor" 
+                            class="bi bi-envelope" 
+                            viewBox="0 0 16 16"
+                        >
+                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                        </svg> Contactez-nous</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--barre de navigation (fin)-->
+
+    <!--Animation sous la barre de navigation-->
+    <div class="animation-rtl">
+        <span>
+            <img
+                src="https://media.cargocollective.com/1/20/650266/headerimg/gif02.gif"
+                alt="logo"
+                class="logo p-3"
+             >
+    =======Bienvenue chez LivAdom votre association de livraison de vos courses en vélo cargot========
+            <img 
+                src="https://media.cargocollective.com/1/20/650266/headerimg/gif02.gif"
+                alt="logo"
+                class="logo p-3"
+            >
+        </span>
+    </div>
+    <!--Animation sous la barre de navigation (fin)-->
+
+
+    <!--modale de contact-->
+
+    <div 
+        class="modal fade" 
+        tabindex="-1" 
+        id="contact" 
+        role="dialog" 
+        aria-hidden="true"
+    >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Contactez-nous</h5>
+                    <button 
+                        type="button" 
+                        class="btn-close" 
+                        data-bs-dismiss="modal" 
+                        aria-label="Close"
+                    >
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="modal-sm-body">
+                    <form 
+                        class="mb-3"
+                        method="post" 
+                        action="acion.php"
+                    >
+                        <div class="col-12 ml-2 mt-3 mx-5">
+                            <input type="radio" id="Mr" name="civility" value="Mr" checked>
+                            <label for="Mr" class="form-label">Monsieur</label>
+                            <input type="radio" id="Mrs" name="civility" value="Mrs">
+                            <label for="Mrs" class="form-label">Madame</label>
+                        </div>
+                        <div class="col-6 mb-3 mx-3">
+                            <label for="name" class="form-label">Votre nom et prénom</label>  
+                            <input type="text" class="form-control" id="name" placeholder="Nom Prénom">
+                        </div>
+                        <div class="col-6 mb-3 mx-3">
+                            <label for="email" class="form-label">Votre adresse e-mail</label>
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                        </div>
+                        <div class="col-8 mb-4 mx-3">
+                            <label for="subject" class="form-label">Sujet</label>
+                            <select name="subject" class="form-control" id="subject" required>
+                                <option value="">---Veuillez choisir votre sujet---</option>
+                                <option value="info">Renseignement</option>
+                                <option value="membership">Demande d'adhésion</option>
+                                <option value="webmaster">Faire une suggestion</option>
+                                <option value="other">Autre</option>
+                            </select>
+                        </div>
+                        <div class="col-10 mb-3 mx-3">
+                            <label for="message" class="form-label">Votre message</label>
+                            <textarea class="form-control" id="message" rows="3" placeholder="Votre message"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                    <button type="submit" class="btn btn-success">Envoyer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--modale de contact (fin)-->
+
+    <!--page présentation-->
+    <main class="container-fluid">
+        <header class="row mt-5">
+            <div class="titlePage2 col-12 text-bg-warning shadow p-3 mb-5">
+                <h3> En quelques mots... </h3>
+            </div>
+            <div class="col">
+                <p>
+                    LivAdom est une association d'utilité publique à but non lucratif. Par votre adhésion, nous couvrons nos frais de fonctionnement.<br>
+                    Vous rencontrez des difficultés pour vos courses? <br> Vous déplacez devient problématique? <br> Vous manquez de temps pour vos courses? <br>
+                    Vous êtes au bon endroit! La solution que nous vous proposons est sure et efficace.
+                </p>
+            </div>
+            <div class="row justify-content-center">
+                <img src="https://www.adera.fr/wp-content/uploads/2015/12/association-loi-1901-2.jpg" alt="loi-1901" class="loi1901">
+                
+            </div>
+        </header>
+        <section class="row mt-5">
+            <div class="col-12 text-bg-warning shadow p-3 mb-5">
+                <h3>Comment ça marche?</h3>
+            </div>
+            <div class="col-12">
+                <p>
+                    Ne confondez pas LivAdom avec un site web de e-commerce ou de drive de grande surface! L'idée ici, est de vous faciliter la vie
+                    en livrant vos courses de manière écolo. Le système mis en place est simple et rapide.
+                </p> 
+            </div>
+                <div class="liste">
+                <ol class="col">
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                      </svg> Etape 1 : Vous faites vos courses en ligne sur le site marchand de votre choix</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                      </svg> Etape 2 : Au moment de selectionner le mode de retrait de la marchandise, vous sélectionnez LivAdom</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                      </svg> Etape 3 : Vous renseignez votr<i class="bi bi-check-lg"></i>e N°Adhérent et le mot de passe LivAdom dans les champs prévus à cet effet</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                      </svg> Etape 4 : Plusieurs créneaux sont disponibles et sont calculés en fonction du créneau magasin</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                      </svg> Etape 5 : Règlement de votre commande</li>
+                </ol>
+                </div>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2-all" viewBox="0 0 16 16">
+                    <path d="M12.354 4.354a.5.5 0 0 0-.708-.708L5 10.293 1.854 7.146a.5.5 0 1 0-.708.708l3.5 3.5a.5.5 0 0 0 .708 0l7-7zm-4.208 7-.896-.897.707-.707.543.543 6.646-6.647a.5.5 0 0 1 .708.708l-7 7a.5.5 0 0 1-.708 0z"/>
+                    <path d="m5.354 7.146.896.897-.707.707-.897-.896a.5.5 0 1 1 .708-.708z"/>
+                  </svg>
+                     Une fois ces 5 étapes réalisées, vous recevez un mail de confirmation de votre magasin et un mail de LivAdom qui confirme la
+                    prise en compte de votre livraison.
+                </p>   
+        </section>
+        <section class="row mt-5">
+            <div class="col-12 text-bg-warning shadow p-3 mb-5 align-self-center">
+                <h3>Dans quelles enseignes puis-je faire mes achats et sélectionner LivAdom?</h3>
+            </div>
+            <div class="col mb-5">
+                <p>
+                    Nous avons établi un partenariat avec la majeure partie des enseignes que nous retrouvons en France métropolitaine. Avant votre
+                    commande, assurez-vous de retrouver le logo de l'association sur le site marchand.
+                </p>
+            </div>
+        </section>
+
+
+    </main>
+   
+<footer class="row">
+    <div class="col align-self-center text-white">
+        <p>Michel BANCKAERT - Eval HTML CSS Bootstrap - Tous droits réservés</p>
+    </div>
+</footer>
+    <script src="../bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>     
+</body>
+</html>
