@@ -51,18 +51,17 @@ footer{
     max-width: 50em;
     margin: 1em auto 2em;
     overflow: hidden;
-    
+    background-color: lightgoldenrodyellow;
 }
 
 .animation-rtl > span{
-    display: inline-block;
     white-space: nowrap;
     font-style: italic;
     color: rgb(9, 195, 9);
-    animation: 25s linear 5s infinite biker;
+    animation: linear 5s infinite biker;
+    animation-duration: 15s;
     font-family: 'Anton', sans-serif;
     font-size: 25px;
-    background-color: lightgoldenrodyellow
 }
 
 .logo{
@@ -77,7 +76,7 @@ footer{
         transform: translate3d(100%,0,0);
     }
     to {
-        transform: translate3d(-100%,0,0);
+        transform: translate3d(-200%,0,0);
     }
 }
 .logo-livraison, .loi1901{
