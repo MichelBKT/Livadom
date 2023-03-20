@@ -86,4 +86,24 @@ footer {
 
 .liste > ol {
   list-style: none;
+}
+
+.card {
+  height: 550px;
+}
+
+.card-img-top {
+  height: 190px;
+  width: 290px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.plan-nancy {
+  display: flex;
+  justify-content: center;
 }/*# sourceMappingURL=style.css.map */
