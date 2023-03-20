@@ -5,18 +5,6 @@
         font-size: 20px;
     }
 }
-@media screen and (max-width: 767px){
-    .animation-rtl > span{
-        display: inline-block;
-        white-space: nowrap;
-        font-style: italic;
-        color: rgb(9, 195, 9);
-        animation: 25s linear 5s infinite biker;
-        font-family: 'Anton', sans-serif;
-        font-size: 15px;
-        background-color: lightgoldenrodyellow
-    }
-}
 
 body{
     font-family: 'Abel', sans-serif;
@@ -48,7 +36,7 @@ footer{
 }
 
 .animation-rtl{
-    max-width: 50em;
+    max-width: auto;
     margin: 1em auto 2em;
     overflow: hidden;
     background-color: lightgoldenrodyellow;
@@ -79,7 +67,7 @@ footer{
         transform: translate3d(-200%,0,0);
     }
 }
-.logo-livraison, .loi1901{
+.loi1901{
     width: 150px;
     height: 150px;
     padding: 0; 
